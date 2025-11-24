@@ -113,8 +113,14 @@ export default function NeuroReveal() {
         {stage === "intro" && (
           <div className="flex flex-col items-center text-center space-y-6">
             <div className="relative">
-              <div className="w-48 h-48 bg-slate-200 rounded-full flex items-center justify-center shadow-inner border-4 border-dashed border-slate-400">
-                <span className="text-6xl text-slate-700">?</span>
+              <div className="w-48 h-48 rounded-full flex items-center justify-center shadow-inner border-4 border-dashed border-slate-400 overflow-hidden bg-slate-200">
+                <iframe 
+                  src="https://tenor.com/embed/12583581146583200089" 
+                  width="192" 
+                  height="192" 
+                  className="rounded-full"
+                  allowFullScreen
+                ></iframe>
               </div>
 
               <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-bounce">
