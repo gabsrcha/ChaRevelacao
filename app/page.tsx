@@ -61,7 +61,7 @@ export default function NeuroReveal() {
     { area: "Memória verbal", p: 95 },
     { area: "Atenção dividida", p: 25 },
     { area: "Atenção alternada", p: 70 },
-    { area: "Baixa Regulação emocional", p: 99 },
+    { area: "Baixa regulação emocional", p: 99 },
   ];
 
   const ansiedadeDepressao = [
