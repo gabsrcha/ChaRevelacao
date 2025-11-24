@@ -23,8 +23,6 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  Line,
-  LineChart as ReLineChart,
 } from "recharts";
 
 export default function NeuroReveal() {
@@ -267,35 +265,56 @@ export default function NeuroReveal() {
                 <BarChart3 className="text-blue-600" /> Percentis Cognitivos
               </h3>
 
-              <div className="w-full h-64 bg-white rounded-xl shadow p-4">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={percentilData}>
-                    <XAxis dataKey="area" stroke="#444" />
-                    <YAxis stroke="#444" />
-                    <Tooltip />
-                    <Bar dataKey="p" fill="#a855f7" />
-                  </BarChart>
-                </ResponsiveContainer>
+              <div className="w-full bg-white rounded-xl shadow p-4">
+                <div className="space-y-3">
+                  {percentilData.map((item) => (
+                    <div key={item.area} className="space-y-1">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-semibold text-slate-700">{item.area}</span>
+                        <span className="text-sm font-bold text-purple-600">{item.p}%</span>
+                      </div>
+                      <div className="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                        <div 
+                          className="bg-gradient-to-r from-purple-500 to-purple-600 h-full rounded-full transition-all duration-500"
+                          style={{ width: `${item.p}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
             {/* ——————————————————————
-                GRÁFICO DE ANSIEDADE / DEPRESSÃO
+                SEÇÃO DE ANSIEDADE / DEPRESSÃO
             —————————————————————— */}
             <div className="w-full mt-12">
               <h3 className="text-2xl font-black text-slate-900 flex items-center gap-2 mb-4">
-                <LineChart className="text-red-600" /> Ansiedade vs Depressão
+                <Zap className="text-yellow-500" /> Ansiedade vs Depressão
               </h3>
 
-              <div className="w-full h-64 bg-white rounded-xl shadow p-4">
-                <ResponsiveContainer width="100%" height="100%">
-                  <ReLineChart data={ansiedadeDepressao}>
-                    <XAxis dataKey="name" stroke="#444" />
-                    <YAxis stroke="#444" />
-                    <Tooltip />
-                    <Line type="monotone" dataKey="score" stroke="#e11d48" strokeWidth={3} />
-                  </ReLineChart>
-                </ResponsiveContainer>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Ansiedade */}
+                <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl border-2 border-yellow-300 shadow-md">
+                  <div className="flex items-center gap-2 mb-3">
+                    <AlertTriangle className="text-yellow-600" size={28} />
+                    <h4 className="text-xl font-bold text-yellow-900">Ansiedade</h4>
+                  </div>
+                  <p className="text-3xl font-black text-yellow-600 mb-2">28</p>
+                  <p className="text-sm text-yellow-700">BAI (Beck Anxiety Inventory)</p>
+                  <p className="text-xs text-yellow-600 mt-2">Nível: Moderado</p>
+                </div>
+
+                {/* Depressão */}
+                <div className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border-2 border-red-300 shadow-md">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Frown className="text-red-600" size={28} />
+                    <h4 className="text-xl font-bold text-red-900">Depressão</h4>
+                  </div>
+                  <p className="text-3xl font-black text-red-600 mb-2">42</p>
+                  <p className="text-sm text-red-700">BDI-II (Beck Depression Inventory)</p>
+                  <p className="text-xs text-red-600 mt-2">Nível: Grave</p>
+                </div>
               </div>
             </div>
 
