@@ -66,7 +66,7 @@ export default function NeuroReveal() {
 
   const ansiedadeDepressao = [
     { name: "BDI-II (Depressão)", score: 42 },
-    { name: "BAI (Ansiedade)", score: 28 },
+    { name: "BAI (Ansiedade)", score: 85 },
   ];
 
   // ——————————————————————
@@ -302,7 +302,7 @@ export default function NeuroReveal() {
                   </div>
                   <p className="text-3xl font-black text-yellow-600 mb-2">28</p>
                   <p className="text-sm text-yellow-700">BAI (Beck Anxiety Inventory)</p>
-                  <p className="text-xs text-yellow-600 mt-2">Nível: Moderado</p>
+                  <p className="text-xs text-yellow-600 mt-2">Nível: Moderado a Grave</p>
                 </div>
 
                 {/* Depressão */}
