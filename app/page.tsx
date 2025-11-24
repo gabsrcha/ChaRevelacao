@@ -172,7 +172,7 @@ export default function NeuroReveal() {
 
               {/* TEXTO AMARELO */}
               <div className="p-4 bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 italic rounded-r-lg text-lg">
-                &quot;Muito depressiva pra descobrir o que sou, perdi o dinheiro, e volto em 12 meses.&quot;
+                &quot;Muito depressiva pra descobrir o que sou, perdi o dinheiro, e volto em 12 meses pra tentar de novo 🤡&quot;
               </div>
             </div>
 
