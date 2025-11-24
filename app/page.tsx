@@ -222,7 +222,7 @@ export default function NeuroReveal() {
                 <div>
                   <h3 className="font-bold text-pink-900">Sensibilidade: 1000%</h3>
                   <p className="text-xs text-pink-600">
-                    Neuroticismo &gt;95. Chora fácil, sente muito, ama intenso.
+                    Neuroticismo &gt;95. Chora fácil, sente muito, ama intenso. SOFRIDA!
                   </p>
                 </div>
               </div>
